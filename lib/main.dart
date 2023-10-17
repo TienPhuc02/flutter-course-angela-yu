@@ -4,9 +4,19 @@ import 'package:flutter/material.dart';
 //flutter cấu trúc code bởi 1 cây widget(tree widget)
 void main() {
   runApp(
-    const MaterialApp(
-      home: Center(
-        child: Text("hello world"),
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.blueGrey,
+        appBar: AppBar(
+          title: const Text("I am Phuc"),
+          backgroundColor: Colors.blueGrey[900],
+        ),
+        body: const Center(
+          child: Image(
+            image: NetworkImage(
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiB8giTN9Hj8QAEz4DVdCtqWbfnrKoZSo2nA&usqp=CAU'),
+          ),
+        ),
       ),
     ),
   );
