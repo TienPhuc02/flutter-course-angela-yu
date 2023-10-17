@@ -13,8 +13,7 @@ void main() {
         ),
         body: const Center(
           child: Image(
-            image: NetworkImage(
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiB8giTN9Hj8QAEz4DVdCtqWbfnrKoZSo2nA&usqp=CAU'),
+            image: AssetImage('images/avatar.jpg'),
           ),
         ),
       ),
