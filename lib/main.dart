@@ -16,27 +16,27 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Column(
+          child: Row(
             //height:auto
             // mainAxisSize: MainAxisSize.min,
-            //đi từ dưới lên và các thành phần cũng đảo ngược thứ tự
             // verticalDirection: VerticalDirection.up,
-            //cả khối col bị đẩy xuống dưới container, nó như kiểu float, hoặc flex-start
+            //đi từ dưới lên và các thành phần cũng đảo ngược thứ tự
             // mainAxisAlignment: MainAxisAlignment.end,
-            //cả nội dung nằm giữa container
+            //cả khối col bị đẩy xuống dưới container, nó như kiểu float, hoặc flex-start
             // mainAxisAlignment: MainAxisAlignment.center,
-            //các phần tử cách đồng đều so với đầu và cuôí
+            //cả nội dung nằm giữa container
             // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            //space beetween
+            //các phần tử cách đồng đều so với đầu và cuôí
             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //Căn theo  bề rộng của cloumn, nếu có 1 phần tử có chiều rộng hơn thì tất cả sẽ tự sắp xếp theo cạnh phải của nhau, luôn đẩy để phần cuối của cột trên trục ngang
+            //space beetween
             // crossAxisAlignment: CrossAxisAlignment.end,
-            //Căn theo bề rộng của cloumn , nếu có 1 phần tử có chiều rộng hơn thì tất cả sẽ tự sắp xếp theo cạnh trái của nhau,luôn đẩy để phần đầy của cột trên trục ngang
+            //Căn theo  bề rộng của cloumn, nếu có 1 phần tử có chiều rộng hơn thì tất cả sẽ tự sắp xếp theo cạnh phải của nhau, luôn đẩy để phần cuối của cột trên trục ngang
             // crossAxisAlignment: CrossAxisAlignment.start,
+            //Căn theo bề rộng của cloumn , nếu có 1 phần tử có chiều rộng hơn thì tất cả sẽ tự sắp xếp theo cạnh trái của nhau,luôn đẩy để phần đầy của cột trên trục ngang
             // crossAxisAlignment: CrossAxisAlignment.stretch,
             //kéo các phần tử trong column với width full
             // crossAxisAlignment: CrossAxisAlignment.end, và 1 khối  width: double.infinity, thì nó sẽ đẩy về sát bên phải
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Container(
                 // margin: const EdgeInsets.all(20),
@@ -47,32 +47,32 @@ class MyApp extends StatelessWidget {
                 //margin top left right bot,
                 // margin: const EdgeInsets.only(left: 30),
                 // padding: const EdgeInsets.all(30),
-                height: 100,
-                // width: 100,
+                // height: 100,
+                width: 30,
                 //lấp đầy chiều rộng
-                width: double.infinity,
+                // width: double.infinity,
                 color: Colors.white,
                 child: const Text("Container 1"),
 
 //Container kiểu như div,chỉ có 1 child
               ),
-              SizedBox(
-                height: 20,
+              const SizedBox(
+                width: 20,
               ),
               // tạo khoảng cách giữa các container
               Container(
                   width: 100,
-                  height: 100,
+                  // height: 100,
                   color: Colors.blue,
                   child: const Text("Container 2")),
               Container(
                   width: 100,
-                  height: 100,
+                  // height: 100,
                   color: Colors.red,
                   child: const Text("Container 3")),
               // nếu nhuw muốn đẩy 3 phần tử này về bên phải-> tạo 1 vùng chứa vô hình,cho nó chiều rộng voo cực
               Container(
-                width: double.infinity,
+                // width: double.infinity,
                 height: 10,
               )
             ],
